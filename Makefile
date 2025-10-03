@@ -9,3 +9,4 @@ generate:
 
 clean:
 	find . -name "*.pb.go" -delete
+

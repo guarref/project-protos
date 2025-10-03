@@ -4,7 +4,7 @@
 // 	protoc        v3.12.4
 // source: proto/user.proto
 
-package user
+package userpb
 
 import (
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -376,7 +376,7 @@ const file_proto_user_proto_rawDesc = "" +
 	"\n" +
 	"DeleteUser\x12\n" +
 	".user.User\x1a\x16.google.protobuf.Empty\x12<\n" +
-	"\tListUsers\x12\x16.user.ListUsersRequest\x1a\x17.user.ListUsersResponseB.Z,github.com/guarref/project-protos/proto/userb\x06proto3"
+	"\tListUsers\x12\x16.user.ListUsersRequest\x1a\x17.user.ListUsersResponseB5Z3github.com/guarref/project-protos/proto/user;userpbb\x06proto3"
 
 var (
 	file_proto_user_proto_rawDescOnce sync.Once

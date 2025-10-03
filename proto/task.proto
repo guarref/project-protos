@@ -1,7 +1,7 @@
 syntax = "proto3";
 package task;
 import "google/protobuf/empty.proto";
-option go_package = "github.com/guarref/project-protos/proto/task";
+option go_package = "github.com/guarref/project-protos/proto/task;taskpb";
 
 // Сущность задача
 message Task {

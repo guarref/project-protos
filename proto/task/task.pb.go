@@ -4,7 +4,7 @@
 // 	protoc        v3.12.4
 // source: proto/task.proto
 
-package task
+package taskpb
 
 import (
 	empty "github.com/golang/protobuf/ptypes/empty"
@@ -375,7 +375,7 @@ const file_proto_task_proto_rawDesc = "" +
 	"\n" +
 	"DeleteTask\x12\n" +
 	".task.Task\x1a\x16.google.protobuf.Empty\x12<\n" +
-	"\tListTasks\x12\x16.task.ListTasksRequest\x1a\x17.task.ListTasksResponseB.Z,github.com/guarref/project-protos/proto/taskb\x06proto3"
+	"\tListTasks\x12\x16.task.ListTasksRequest\x1a\x17.task.ListTasksResponseB5Z3github.com/guarref/project-protos/proto/task;taskpbb\x06proto3"
 
 var (
 	file_proto_task_proto_rawDescOnce sync.Once
