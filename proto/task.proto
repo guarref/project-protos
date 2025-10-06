@@ -7,10 +7,12 @@ option go_package = "github.com/guarref/project-protos/proto/task;taskpb";
 message Task {
   uint32 id      = 1;
   string title   = 2;
+  uint32 userId  = 3;
 }
 
 message CreateTaskRequest {
-  string title = 1;
+  string title  = 1;
+  uint32 userId = 2;
 }
 message CreateTaskResponse {
   Task task = 1;
@@ -18,11 +20,12 @@ message CreateTaskResponse {
 
 // запрос на изменение
 message UpdateTaskRequest {
-    uint32 id = 1;
-    string title = 2; // проверить на сервере
+  uint32 id     = 1;
+  string title  = 2; // проверить на сервере
+  uint32 userId = 3;
 }
 message UpdateTaskResponse {
-    Task task = 1;
+  Task task = 1;
 }
 
 // запрос на удаление, а он нам и не нужен наверное
@@ -30,7 +33,15 @@ message UpdateTaskResponse {
 // запрос на лист
 message ListTasksRequest {}
 message ListTasksResponse {
-    repeated Task tasks = 1;
+  repeated Task tasks = 1;
+}
+
+message ListTasksByUserRequest {
+  uint32 userId = 1;
+}
+
+message ListTasksByUserResponse {
+  repeated Task tasks = 1;
 }
 
 service TaskService {
@@ -39,4 +50,5 @@ service TaskService {
   rpc UpdateTask (UpdateTaskRequest) returns (UpdateTaskResponse);
   rpc DeleteTask (Task)              returns (google.protobuf.Empty);
   rpc ListTasks  (ListTasksRequest)  returns (ListTasksResponse);
+  rpc ListTasksByUser (ListTasksByUserRequest) returns (ListTasksByUserResponse);
 }
